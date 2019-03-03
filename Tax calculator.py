@@ -9,13 +9,14 @@ while True:
     print ("Made by Joshua Hillis")
     time.sleep(.5)
 
-    tax = float(input("What is the tax rate we must apply to the item?"))
-    price = float(input("What's the price of the item?"))
+    tax = input("What is the tax rate we must apply to the item?")
+    price = input("What's the price of the item?")
 
-    if tax > 1:
-        tax = (tax / 100)
+    tax = float(tax)
+    price = float(price)
+    print = str(format((round((float(tax) / 100 + 1) * float(price), 2)), '.2f'))
 
-    if re.search('[^\d\.$]', (tax)) or re.search('[^\d\.$%]', (price)):
+    if re.search('[^\d\.$]', str(tax)) or re.search('[^\d\.$%]', str(price)):
         print ("please enter valid response")
         time.sleep(1)
     else:
@@ -34,18 +35,18 @@ while True:
 
         if answer == "y" or answer == "n":
             if answer == "y":
-                tax = float(input("What is the tax rate we must apply to the item?"))
-                price = float(input("What's the price of the item?"))
+                tax = input("What is the tax rate we must apply to the item?")
+                price = input("What's the price of the item?")
 
-                if tax > 1:
-                    tax = (tax / 100)
-            if re.search('[^\d\.$]', (tax)) or re.search('[^\d\.$%]', (price)):
+            if re.search('[^\d\.$]', str(tax)) or re.search('[^\d\.$%]', str(price)):
                 print("please enter valid response")
                 time.sleep(1)
             else:
                 re.sub('[^\d\.]', '', str(tax))
                 re.sub('[^\d\.]', '', str(price))
-
+            tax = float(tax)
+            price = float(price)
+            print = str(format((round((float(tax) / 100 + 1) * float(price), 2)), '.2f'))
         else:
-            print ("Goodbye.")
+            print("Goodbye.")
             break
