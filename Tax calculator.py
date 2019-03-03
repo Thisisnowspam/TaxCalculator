@@ -1,10 +1,8 @@
 # Made by Joshua Hillis
-import os
 import re
-from decimal import Decimal
 import time
 while True:
-
+    # i'm stupid so we have to do this again
     def inputFromUser():
         global tax
         global price
