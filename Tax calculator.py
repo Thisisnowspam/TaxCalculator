@@ -1,9 +1,8 @@
-# taylor
 # Made by Joshua Hillis
 import re
 import time
 while True:
-    # i'm stupid so we have to do this again
+
     def inputFromUser():
         global tax
         global price
